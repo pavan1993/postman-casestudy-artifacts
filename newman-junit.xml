@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Payments / payment-refund-api (JWT Mock)" tests="11" time="0.028">
+  <testsuite name="00 - Auth / POST Get Token (Mocked)" id="1f002e5a-1ae5-4b28-8219-985f449358ce" timestamp="2025-12-14T19:13:58.835Z" tests="2" failures="0" errors="0" time="0.003">
+    <testcase name="Authorization header attached to outgoing request" time="0.003" classname="00AuthPostGetTokenMocked"/>
+    <testcase name="Auth token acquired" time="0.003" classname="00AuthPostGetTokenMocked"/>
+  </testsuite>
+  <testsuite name="01 - Health / GET Health" id="8482b480-2843-476d-8996-944906b4dee8" timestamp="2025-12-14T19:13:58.835Z" tests="2" failures="0" errors="0" time="0.002">
+    <testcase name="Authorization header attached to outgoing request" time="0.002" classname="01HealthGetHealth"/>
+    <testcase name="Health OK" time="0.002" classname="01HealthGetHealth"/>
+  </testsuite>
+  <testsuite name="02 - Refund Flow / POST Create Refund" id="0e3b640e-61f4-457c-8e61-ebe543cbdcf1" timestamp="2025-12-14T19:13:58.835Z" tests="3" failures="0" errors="0" time="0.002">
+    <testcase name="Authorization header attached to outgoing request" time="0.002" classname="02RefundFlowPostCreateRefund"/>
+    <testcase name="refundId captured" time="0.002" classname="02RefundFlowPostCreateRefund"/>
+    <testcase name="refund currency present" time="0.002" classname="02RefundFlowPostCreateRefund"/>
+  </testsuite>
+  <testsuite name="02 - Refund Flow / GET Refund Details" id="63af3039-ccc3-415b-9ba2-0dbfef3d90c3" timestamp="2025-12-14T19:13:58.835Z" tests="1" failures="0" errors="0" time="0.003">
+    <testcase name="Authorization header attached to outgoing request" time="0.003" classname="02RefundFlowGetRefundDetails"/>
+  </testsuite>
+  <testsuite name="02 - Refund Flow / GET Refund Status" id="1b02d6a3-0c30-4971-a64e-649d8d32ce74" timestamp="2025-12-14T19:13:58.835Z" tests="4" failures="0" errors="0" time="0.002">
+    <testcase name="Authorization header attached to outgoing request" time="0.002" classname="02RefundFlowGetRefundStatus"/>
+    <testcase name="refund status HTTP 200" time="0.002" classname="02RefundFlowGetRefundStatus"/>
+    <testcase name="refund status present" time="0.002" classname="02RefundFlowGetRefundStatus"/>
+    <testcase name="refund status value" time="0.002" classname="02RefundFlowGetRefundStatus"/>
+  </testsuite>
+  <testsuite name="02 - Refund Flow / POST Cancel Refund" id="f7fec5a5-6160-4080-a678-bc742057793f" timestamp="2025-12-14T19:13:58.835Z" tests="1" failures="0" errors="0" time="0.002">
+    <testcase name="Authorization header attached to outgoing request" time="0.002" classname="02RefundFlowPostCancelRefund"/>
+  </testsuite>
+  <testsuite name="03 - Reporting / GET List Refunds" id="2ceb2e6f-27d5-424f-9352-10e3bc01591e" timestamp="2025-12-14T19:13:58.835Z" tests="1" failures="0" errors="0" time="0.002">
+    <testcase name="Authorization header attached to outgoing request" time="0.002" classname="03ReportingGetListRefunds"/>
+  </testsuite>
+  <testsuite name="98 - Contract Check / GET Contract Check (Health)" id="81b70cdc-3c1c-444a-8e1a-9035cfa7dfe9" timestamp="2025-12-14T19:13:58.835Z" tests="3" failures="0" errors="0" time="0.002">
+    <testcase name="Authorization header attached to outgoing request" time="0.002" classname="98ContractCheckGetContractCheckHealth"/>
+    <testcase name="contract check HTTP 200" time="0.002" classname="98ContractCheckGetContractCheckHealth"/>
+    <testcase name="output contract satisfied" time="0.002" classname="98ContractCheckGetContractCheckHealth"/>
+  </testsuite>
+  <testsuite name="99 - Edge Cases (Optional) / GET Status - Unknown refundId (404)" id="a927c748-8ed1-40f7-b017-d7cfef110e08" timestamp="2025-12-14T19:13:58.835Z" tests="2" failures="0" errors="0" time="0.003">
+    <testcase name="Authorization header attached to outgoing request" time="0.003" classname="99EdgeCasesOptionalGetStatusUnknownRefundId404"/>
+    <testcase name="Edge status 404" time="0.003" classname="99EdgeCasesOptionalGetStatusUnknownRefundId404"/>
+  </testsuite>
+  <testsuite name="99 - Edge Cases (Optional) / POST Create Refund - Bad Request (400)" id="12d1562b-0be6-4357-8691-cdeed03c2912" timestamp="2025-12-14T19:13:58.835Z" tests="2" failures="0" errors="0" time="0.002">
+    <testcase name="Authorization header attached to outgoing request" time="0.002" classname="99EdgeCasesOptionalPostCreateRefundBadRequest400"/>
+    <testcase name="Edge bad request 400" time="0.002" classname="99EdgeCasesOptionalPostCreateRefundBadRequest400"/>
+  </testsuite>
+  <testsuite name="99 - Edge Cases (Optional) / GET Health - Rate Limited (429)" id="9f317217-fd4f-4598-9669-f7854f919955" timestamp="2025-12-14T19:13:58.835Z" tests="2" failures="0" errors="0" time="0.002">
+    <testcase name="Authorization header attached to outgoing request" time="0.002" classname="99EdgeCasesOptionalGetHealthRateLimited429"/>
+    <testcase name="Edge rate limit 429" time="0.002" classname="99EdgeCasesOptionalGetHealthRateLimited429"/>
+  </testsuite>
+</testsuites>
